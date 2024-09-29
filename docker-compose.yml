@@ -1,0 +1,13 @@
+---
+services:
+  redis:
+    image: redis
+    volumes:
+      - /opt/docker/redis/data:/data
+    entrypoint:
+      - redis
+      - --save
+      - 60
+      - 1
+    expose:
+      - 6379
